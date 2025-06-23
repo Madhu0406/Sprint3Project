@@ -59,10 +59,10 @@ class AuthServiceTest {
 
     @Test
     void testLoginSuccess() {
-        // When
+        
         UserResponse response = authService.login(loginRequest);
 
-        // Then
+        
         assertThat(response).isNotNull();
         assertThat(response.getEmail()).isEqualTo("john.doe@example.com");
         assertThat(response.getFirstName()).isEqualTo("John");
@@ -71,10 +71,10 @@ class AuthServiceTest {
 
     @Test
     void testLoginUserNotFound() {
-        // Given
+        
         loginRequest.setEmail("nonexistent@example.com");
 
-        // When & Then
+        
         assertThatThrownBy(() -> authService.login(loginRequest))
                 .isInstanceOf(UserNotFoundException.class)
                 .hasMessageContaining("User not found with email");
@@ -82,10 +82,10 @@ class AuthServiceTest {
 
     @Test
     void testLoginInvalidPassword() {
-        // Given
+        
         loginRequest.setPassword("wrongpassword");
 
-        // When & Then
+        
         assertThatThrownBy(() -> authService.login(loginRequest))
                 .isInstanceOf(InvalidCredentialsException.class)
                 .hasMessage("Invalid password");
@@ -93,10 +93,10 @@ class AuthServiceTest {
 
     @Test
     void testRegisterSuccess() {
-        // When
+        
         UserResponse response = authService.register(registerRequest);
 
-        // Then
+        
         assertThat(response).isNotNull();
         assertThat(response.getEmail()).isEqualTo("jane.smith@example.com");
         assertThat(response.getFirstName()).isEqualTo("Jane");
@@ -105,10 +105,10 @@ class AuthServiceTest {
 
     @Test
     void testRegisterUserAlreadyExists() {
-        // Given
-        registerRequest.setEmail("john.doe@example.com"); // Already exists
+        
+        registerRequest.setEmail("john.doe@example.com"); 
 
-        // When & Then
+        
         assertThatThrownBy(() -> authService.register(registerRequest))
                 .isInstanceOf(RuntimeException.class)
                 .hasMessageContaining("User already exists");
@@ -116,10 +116,10 @@ class AuthServiceTest {
 
     @Test
     void testRegisterPasswordMismatch() {
-        // Given
+        
         registerRequest.setConfirmPassword("differentPassword");
 
-        // When & Then
+        
         assertThatThrownBy(() -> authService.register(registerRequest))
                 .isInstanceOf(RuntimeException.class)
                 .hasMessage("Passwords do not match");
