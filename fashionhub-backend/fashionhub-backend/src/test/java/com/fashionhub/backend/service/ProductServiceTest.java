@@ -61,10 +61,10 @@ class ProductServiceTest {
 
     @Test
     void testGetAllProducts() {
-        // When
+        
         List<ProductResponse> products = productService.getAllProducts();
 
-        // Then
+        
         assertThat(products).hasSize(1);
         assertThat(products.get(0).getProductId()).isEqualTo("TEST001");
         assertThat(products.get(0).getProductName()).isEqualTo("Test Product");
@@ -72,10 +72,10 @@ class ProductServiceTest {
 
     @Test
     void testGetProductById() {
-        // When
+        
         ProductResponse product = productService.getProductById("TEST001");
 
-        // Then
+        
         assertThat(product).isNotNull();
         assertThat(product.getProductId()).isEqualTo("TEST001");
         assertThat(product.getProductName()).isEqualTo("Test Product");
@@ -83,7 +83,7 @@ class ProductServiceTest {
 
     @Test
     void testGetProductByIdNotFound() {
-        // When & Then
+        
         assertThatThrownBy(() -> productService.getProductById("NONEXISTENT"))
                 .isInstanceOf(ProductNotFoundException.class)
                 .hasMessageContaining("Product not found with ID: NONEXISTENT");
@@ -91,30 +91,30 @@ class ProductServiceTest {
 
     @Test
     void testGetProductsByCategory() {
-        // When
+        
         List<ProductResponse> products = productService.getProductsByCategory(testCategory.getCategoryId());
 
-        // Then
+        
         assertThat(products).hasSize(1);
         assertThat(products.get(0).getCategoryId()).isEqualTo(testCategory.getCategoryId());
     }
 
     @Test
     void testSearchProducts() {
-        // When
+        
         List<ProductResponse> products = productService.searchProducts("Test");
 
-        // Then
+        
         assertThat(products).hasSize(1);
         assertThat(products.get(0).getProductName()).contains("Test");
     }
 
     @Test
     void testSearchProductsNoResults() {
-        // When
+        
         List<ProductResponse> products = productService.searchProducts("NonExistent");
 
-        // Then
+        
         assertThat(products).isEmpty();
     }
 }
