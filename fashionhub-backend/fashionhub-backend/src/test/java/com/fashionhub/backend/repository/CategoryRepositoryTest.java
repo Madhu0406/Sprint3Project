@@ -33,7 +33,7 @@ class CategoryRepositoryTest {
         testCategory = new Category("Electronics", "Electronic items and gadgets");
         testCategory = categoryRepository.save(testCategory);
 
-        // Add a product to test the count
+        
         Product product = new Product();
         product.setProductId("ELEC001");
         product.setProductName("Test Electronics");
@@ -51,20 +51,19 @@ class CategoryRepositoryTest {
 
     @Test
     void testFindAll() {
-        // When
+        
         List<Category> categories = categoryRepository.findAll();
 
-        // Then
         assertThat(categories).hasSize(1);
         assertThat(categories.get(0).getCategoryName()).isEqualTo("Electronics");
     }
 
     @Test
     void testFindCategoriesWithProductCount() {
-        // When
+        
         List<Object[]> results = categoryRepository.findCategoriesWithProductCount();
 
-        // Then
+        
         assertThat(results).hasSize(1);
         Object[] result = results.get(0);
         Category category = (Category) result[0];
