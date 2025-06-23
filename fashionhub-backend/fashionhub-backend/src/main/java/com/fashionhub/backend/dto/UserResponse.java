@@ -7,7 +7,7 @@ public class UserResponse {
     private String email;
     private String phoneNumber;
 
-    // Constructors
+    
     public UserResponse() {}
 
     public UserResponse(Integer userId, String firstName, String lastName, String email, String phoneNumber) {
@@ -18,7 +18,7 @@ public class UserResponse {
         this.phoneNumber = phoneNumber;
     }
 
-    // Getters and Setters
+    
     public Integer getUserId() { return userId; }
     public void setUserId(Integer userId) { this.userId = userId; }
 
