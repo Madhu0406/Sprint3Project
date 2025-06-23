@@ -24,10 +24,10 @@ public class RegisterRequest {
     @NotBlank(message = "Confirm password is required")
     private String confirmPassword;
 
-    // Constructors
+    
     public RegisterRequest() {}
 
-    // Getters and Setters
+    
     public String getFirstName() { return firstName; }
     public void setFirstName(String firstName) { this.firstName = firstName; }
 
