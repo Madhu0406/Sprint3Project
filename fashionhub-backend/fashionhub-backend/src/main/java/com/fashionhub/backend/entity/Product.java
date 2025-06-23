@@ -55,7 +55,7 @@ public class Product {
         createdAt = LocalDateTime.now();
     }
 
-    // Constructors
+    
     public Product() {}
 
     public Product(String productId, String productName, Category category, String description,
@@ -73,7 +73,7 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    // Getters and Setters
+    
     public String getProductId() { return productId; }
     public void setProductId(String productId) { this.productId = productId; }
 
