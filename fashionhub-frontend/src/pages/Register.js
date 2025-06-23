@@ -8,7 +8,7 @@ const Register = () => {
     lastName: '',
     email: '',
     password: '',
-    confirmPassword: '', // Add this field to match Postman
+    confirmPassword: '', 
     phoneNumber: ''
   });
   const [error, setError] = useState('');
@@ -73,13 +73,13 @@ const Register = () => {
     setSuccess('');
 
     try {
-      // Send data in EXACT same format as your working Postman request
+      
       const registrationData = {
         firstName: formData.firstName.trim(),
         lastName: formData.lastName.trim(),
         email: formData.email.trim(),
         password: formData.password,
-        confirmPassword: formData.confirmPassword, // Include this field
+        confirmPassword: formData.confirmPassword, 
         phoneNumber: formData.phoneNumber.trim()
       };
 
