@@ -62,7 +62,7 @@ export const AuthProvider = ({ children }) => {
       const response = await authAPI.register(userData);
       console.log('Registration response:', response);
 
-      // Check for successful response
+      
       if (response.status === 200 || response.status === 201) {
         return {
           success: true,
@@ -84,20 +84,20 @@ export const AuthProvider = ({ children }) => {
       });
 
       if (error.response) {
-        // Server responded with error status
+        
         const errorMessage = error.response.data?.message ||
                            error.response.data?.error ||
                            error.response.data ||
                            `Registration failed with status ${error.response.status}`;
         return { success: false, message: errorMessage };
       } else if (error.request) {
-        // Request was made but no response received
+        
         return {
           success: false,
           message: 'No response from server. Please check if the backend is running on port 8080.'
         };
       } else {
-        // Something else happened
+        
         return {
           success: false,
           message: 'Registration failed. Please try again.'
