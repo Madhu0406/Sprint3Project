@@ -17,7 +17,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
-@AutoConfigureMockMvc  // This annotation is REQUIRED for MockMvc
+@AutoConfigureMockMvc  
 @ActiveProfiles("test")
 @Transactional
 class CategoryIntegrationTest {
