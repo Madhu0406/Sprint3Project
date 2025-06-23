@@ -45,7 +45,7 @@ const Browse = () => {
       setProducts(productsData);
       setCategories(categoriesData);
 
-      // Extract unique brands from products
+      
       const uniqueBrands = [...new Set(productsData.map(product => product.brand).filter(Boolean))];
       setBrands(uniqueBrands);
     } catch (error) {
@@ -63,13 +63,13 @@ const Browse = () => {
   const applyFilters = () => {
     let filteredProducts = [...allProducts];
 
-    // Search by product ID
+    
     if (filters.productId.trim()) {
       filteredProducts = filteredProducts.filter(product =>
         product.productId?.toLowerCase().includes(filters.productId.toLowerCase())
       );
     }
-    // Search by name/description
+    
     else if (filters.searchTerm.trim()) {
       filteredProducts = filteredProducts.filter(product =>
         product.productName?.toLowerCase().includes(filters.searchTerm.toLowerCase()) ||
@@ -77,21 +77,21 @@ const Browse = () => {
       );
     }
 
-    // Filter by category
+    
     if (filters.category !== 'All Categories') {
       filteredProducts = filteredProducts.filter(product =>
         product.categoryName?.toLowerCase() === filters.category.toLowerCase()
       );
     }
 
-    // Filter by brand
+    
     if (filters.brand !== 'All Brands') {
       filteredProducts = filteredProducts.filter(product =>
         product.brand?.toLowerCase() === filters.brand.toLowerCase()
       );
     }
 
-    // Filter by price range
+    
     if (filters.priceRange !== 'All Prices') {
       const [min, max] = filters.priceRange.split('-').map(Number);
       filteredProducts = filteredProducts.filter(product => {
@@ -99,7 +99,7 @@ const Browse = () => {
         if (max) {
           return price >= min && price <= max;
         } else {
-          return price >= min; // For "5000+" case
+          return price >= min; 
         }
       });
     }
@@ -123,7 +123,7 @@ const Browse = () => {
     setProducts(allProducts);
   };
 
-  // Loading state
+  
   if (loading) {
     return (
       <div className="loading-container">
