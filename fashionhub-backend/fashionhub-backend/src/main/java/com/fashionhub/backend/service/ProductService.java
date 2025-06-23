@@ -69,14 +69,14 @@ public class ProductService {
         response.setImageUrl(product.getImageUrl());
         response.setCreatedAt(product.getCreatedAt());
 
-        // Get sizes
+        
         List<String> sizes = productSizeRepository.findByProductProductId(product.getProductId())
                 .stream()
                 .map(size -> size.getSize())
                 .collect(Collectors.toList());
         response.setSizes(sizes);
 
-        // Get offers
+    
         List<String> offers = offerRepository.findByProductProductId(product.getProductId())
                 .stream()
                 .map(offer -> offer.getOfferDescription())
