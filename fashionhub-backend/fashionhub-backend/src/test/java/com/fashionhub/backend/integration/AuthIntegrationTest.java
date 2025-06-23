@@ -37,7 +37,7 @@ class AuthIntegrationTest {
     void setUp() {
         userRepository.deleteAll();
 
-        // Create test user
+        
         User testUser = new User();
         testUser.setFirstName("John");
         testUser.setLastName("Doe");
