@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
-@AutoConfigureMockMvc  // This annotation is REQUIRED for MockMvc
+@AutoConfigureMockMvc  
 @ActiveProfiles("test")
 @Transactional
 class ProductIntegrationTest {
@@ -43,7 +43,7 @@ class ProductIntegrationTest {
         productRepository.deleteAll();
         categoryRepository.deleteAll();
 
-        // Create test data
+        
         Category category = new Category("Integration Test Category", "Test Description");
         category = categoryRepository.save(category);
 
@@ -94,7 +94,7 @@ class ProductIntegrationTest {
 
     @Test
     void testGetProductsByCategoryIntegration() throws Exception {
-        // Get the category ID from the saved category
+        
         Category savedCategory = categoryRepository.findAll().get(0);
 
         mockMvc.perform(get("/products/category/" + savedCategory.getCategoryId())
