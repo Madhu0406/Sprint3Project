@@ -10,6 +10,6 @@ class FashionhubBackendApplicationTests {
 
 	@Test
 	void contextLoads() {
-		// This test ensures that the Spring context loads successfully
+		
 	}
 }
