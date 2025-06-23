@@ -37,17 +37,17 @@ public class AuthService {
         try {
             System.out.println("Register request received: " + registerRequest.getEmail());
 
-            // Check if user already exists
+            
             if (userRepository.existsByEmail(registerRequest.getEmail())) {
                 throw new RuntimeException("User already exists with email: " + registerRequest.getEmail());
             }
 
-            // Validate password confirmation
+            
             if (!registerRequest.getPassword().equals(registerRequest.getConfirmPassword())) {
                 throw new RuntimeException("Passwords do not match");
             }
 
-            // Create new user
+            
             User user = new User(
                     registerRequest.getFirstName(),
                     registerRequest.getLastName(),
