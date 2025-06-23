@@ -40,7 +40,7 @@ class AuthControllerTest {
     void setUp() {
         userRepository.deleteAll();
 
-        // Create existing user for login tests
+        
         User existingUser = new User();
         existingUser.setFirstName("John");
         existingUser.setLastName("Doe");
