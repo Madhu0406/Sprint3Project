@@ -34,7 +34,7 @@ public class User {
     @Column(name = "PhoneNumber", length = 15)
     private String phoneNumber;
 
-    // Constructors
+    
     public User() {}
 
     public User(String firstName, String lastName, String password, String email, String phoneNumber) {
@@ -45,7 +45,7 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    // Getters and Setters
+    
     public Integer getUserId() { return userId; }
     public void setUserId(Integer userId) { this.userId = userId; }
 
