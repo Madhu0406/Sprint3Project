@@ -36,10 +36,10 @@ class UserRepositoryTest {
 
     @Test
     void testFindByEmail() {
-        // When
+        
         Optional<User> found = userRepository.findByEmail("john.doe@test.com");
 
-        // Then
+        
         assertThat(found).isPresent();
         assertThat(found.get().getFirstName()).isEqualTo("John");
         assertThat(found.get().getLastName()).isEqualTo("Doe");
@@ -47,28 +47,28 @@ class UserRepositoryTest {
 
     @Test
     void testExistsByEmail() {
-        // When
+        
         boolean exists = userRepository.existsByEmail("john.doe@test.com");
 
-        // Then
+        
         assertThat(exists).isTrue();
     }
 
     @Test
     void testFindByEmailNotFound() {
-        // When
+        
         Optional<User> found = userRepository.findByEmail("nonexistent@test.com");
 
-        // Then
+        
         assertThat(found).isEmpty();
     }
 
     @Test
     void testExistsByEmailNotFound() {
-        // When
+        
         boolean exists = userRepository.existsByEmail("nonexistent@test.com");
 
-        // Then
+        
         assertThat(exists).isFalse();
     }
 }
