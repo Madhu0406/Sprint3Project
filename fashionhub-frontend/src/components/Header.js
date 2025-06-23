@@ -11,21 +11,21 @@ const Header = () => {
     navigate('/');
   };
 
-  // Function to get display name from user data
+  
   const getDisplayName = () => {
     if (!user) return '';
 
-    // First try firstName from database
+    
     if (user.firstName) {
       return user.firstName;
     }
 
-    // Fallback: extract first name from email if firstName is not available
+    
     if (user.email) {
       const emailPrefix = user.email.split('@')[0];
       const nameParts = emailPrefix.split('.');
       if (nameParts.length > 0) {
-        // Capitalize first letter
+        
         return nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1);
       }
     }
