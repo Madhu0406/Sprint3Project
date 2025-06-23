@@ -30,10 +30,10 @@ class CategoryServiceTest {
 
     @BeforeEach
     void setUp() {
-        // Clean up repository
+        
         categoryRepository.deleteAll();
 
-        // Create test categories
+        
         testCategory1 = new Category("Electronics", "Electronic items and gadgets");
         testCategory2 = new Category("Clothing", "Fashion and apparel");
 
@@ -43,10 +43,10 @@ class CategoryServiceTest {
 
     @Test
     void testGetAllCategories() {
-        // When
+        
         List<Category> categories = categoryService.getAllCategories();
 
-        // Then
+        
         assertThat(categories).hasSize(2);
         assertThat(categories).extracting(Category::getCategoryName)
                 .containsExactlyInAnyOrder("Electronics", "Clothing");
@@ -54,10 +54,10 @@ class CategoryServiceTest {
 
     @Test
     void testGetCategoriesWithProductCount() {
-        // When
+        
         Map<String, Object> categoriesWithCount = categoryService.getCategoriesWithProductCount();
 
-        // Then
+        
         assertThat(categoriesWithCount).hasSize(2);
         assertThat(categoriesWithCount).containsKeys("Electronics", "Clothing");
 
@@ -70,25 +70,25 @@ class CategoryServiceTest {
 
     @Test
     void testGetAllCategoriesWhenEmpty() {
-        // Given
+        
         categoryRepository.deleteAll();
 
-        // When
+        
         List<Category> categories = categoryService.getAllCategories();
 
-        // Then
+        
         assertThat(categories).isEmpty();
     }
 
     @Test
     void testGetCategoriesWithProductCountWhenEmpty() {
-        // Given
+        
         categoryRepository.deleteAll();
 
-        // When
+        
         Map<String, Object> categoriesWithCount = categoryService.getCategoriesWithProductCount();
 
-        // Then
+        
         assertThat(categoriesWithCount).isEmpty();
     }
 }
