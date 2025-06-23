@@ -20,10 +20,10 @@ public class ProductResponse {
     private List<String> sizes;
     private List<String> offers;
 
-    // Constructors
+    
     public ProductResponse() {}
 
-    // Getters and Setters
+    
     public String getProductId() { return productId; }
     public void setProductId(String productId) { this.productId = productId; }
 
