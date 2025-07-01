@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
     if (imageUrl.startsWith('http')) {
       return imageUrl;
     }
-    return `http://localhost:8080/static/images/${imageUrl}`;
+    return `http://localhost:8080/api${imageUrl.startsWith('/') ? imageUrl : '/' + imageUrl}`;
   };
 
   const formatPrice = (price) => {
