@@ -1,0 +1,13 @@
+com/fashionhub/backend/controller/CategoryControllerTest.class
+com/fashionhub/backend/integration/AuthIntegrationTest.class
+com/fashionhub/backend/integration/ProductIntegrationTest.class
+com/fashionhub/backend/controller/ProductControllerTest.class
+com/fashionhub/backend/integration/CategoryIntegrationTest.class
+com/fashionhub/backend/service/CategoryServiceTest.class
+com/fashionhub/backend/repository/UserRepositoryTest.class
+com/fashionhub/backend/service/AuthServiceTest.class
+com/fashionhub/backend/controller/AuthControllerTest.class
+com/fashionhub/backend/repository/CategoryRepositoryTest.class
+com/fashionhub/backend/repository/ProductRepositoryTest.class
+com/fashionhub/backend/FashionhubBackendApplicationTests.class
+com/fashionhub/backend/service/ProductServiceTest.class

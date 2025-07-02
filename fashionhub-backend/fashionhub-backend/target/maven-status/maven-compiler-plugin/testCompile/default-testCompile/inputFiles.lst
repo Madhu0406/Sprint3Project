@@ -1,0 +1,13 @@
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/FashionHubBackendApplicationTests.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/controller/AuthControllerTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/controller/CategoryControllerTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/controller/ProductcontrollerTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/integration/AuthIntegrationTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/integration/CategoryIntegrationTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/integration/ProductIntegrationTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/repository/CategoryRepositoryTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/repository/ProductRepositoryTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/repository/UserRepositoryTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/service/AuthServiceTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/service/CategoryServiceTest.java
+/home/runner/work/Sprint3Project/Sprint3Project/fashionhub-backend/fashionhub-backend/src/test/java/com/fashionhub/backend/service/ProductServiceTest.java
